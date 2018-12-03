@@ -48,4 +48,11 @@ func main() {
 		fmt.Println("The current value is", item)
 	})
 	// End Each operation
+
+	// Reduce operation
+	fmt.Println("numberCollection reduced")
+	fmt.Println(numberReduce(numberCollection, func(prev int, curr int) int {
+		return prev + curr
+	}, 0))
+	// End Reduce operation
 }

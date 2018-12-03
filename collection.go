@@ -37,3 +37,11 @@ func numberEach(c []int, f func(int)) {
 		f(item)
 	}
 }
+
+func numberReduce(c []int, f func(int, int) int, initial int) int {
+	for _, item := range c {
+		initial = f(initial, item)
+	}
+
+	return initial
+}
