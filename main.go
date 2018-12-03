@@ -55,4 +55,13 @@ func main() {
 		return prev + curr
 	}, 0))
 	// End Reduce operation
+
+	// Every operation
+	fmt.Println("numberCollection every-ed")
+	if numberEvery(filteredNumberCollection, func(item int) bool {
+		return item%2 == 0
+	}) {
+		fmt.Println("All item in filteredNumberCollection are even")
+	}
+	// End Every operation
 }

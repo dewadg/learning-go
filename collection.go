@@ -45,3 +45,13 @@ func numberReduce(c []int, f func(int, int) int, initial int) int {
 
 	return initial
 }
+
+func numberEvery(c []int, f func(int) bool) bool {
+	for _, item := range c {
+		if !f(item) {
+			return false
+		}
+	}
+
+	return true
+}
